@@ -48,12 +48,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">C O F F E E D</a>
+                <a class="navbar-brand page-scroll" href="/">C O F F E E D</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    {% block navigation %}
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
@@ -66,14 +67,16 @@
                     <li>
                         <a class="page-scroll" href="#contact">Get Invited</a>
                     </li>
+                    {% endblock %}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
-
-    <!-- Header -->
+    
+        <!-- Header -->
+    {% block main_content %}
     <header>
         <div class="container">
             <div class="intro-text">
@@ -86,6 +89,7 @@
             </div>
         </div>
     </header>
+
 
     <!-- Services Section -->
     <section id="services">
@@ -197,7 +201,8 @@
             </div>
         </div>
     </section>
-
+    
+    {% endblock %}
     <footer>
         <div class="container">
             <div class="row">
@@ -223,7 +228,9 @@
             </div>
         </div>
     </footer>
+    
 
+    
     
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
